@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Rubik:ital@1&display=swap');
+
+.container {
+  border-radius: 10px;
+  width: 29%;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%);
+  left: 50%;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo img {
+  width: 35%;
+
+}
+
+.flex_nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  align-items: center;
+}
+
+.flex_icon {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar {
+  background: #0c0c0c;
+
+}
+
+.story_img {
+  border-radius: 50%;
+  /* width: 10%;
+  height: 12vh; */
+  width: 75px;
+  height: 10vh;
+  padding: 3px;
+  /* background: #0c0c0c; */
+  /* border: 4px solid;  */
+  background: linear-gradient(45deg, red, #ff002d, #9d00ff);
+
+  gap: 1rem;
+}
+
+.img1 {
+  background: #ffffff61;
+}
+
+.story_images {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 0px 4px 20px;
+  background: #0c0c0c;
+  /* box-shadow: 1px 16px 19px -6px #161616; */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background: #0c0c0c;
+  /* border-top: 1px solid #fff3; */
+
+  color: #fff;
+}
+
+.post img {
+  width: 100%;
+  height: auto;
+}
+.post{
+  display: flex ;
+}
+.post_footer {
+  background: #0c0c0c;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 20px;
+}
+
+.left_icon {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #0f0f0f;
+  position: sticky;
+  bottom: 0;
+}
+
+.custom-svg {
+  fill: red;
+  /* or stroke: red; for outline color change */
+}
+
+.icon {
+  filter: invert(100%)
+}
+
+.left_nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 1rem;
+}
+
+.left_nav_img {
+  width: 10%;
+  height: 5vh;
+  border-radius: 50%;
+}
+
+.story_section_img_name {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 7.5px;
+}
+.logo{
+  display: flex;
+}
