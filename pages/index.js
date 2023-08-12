@@ -6,13 +6,15 @@ import Heart from '../public/heart.svg'
 import Chat from '../public/chat.svg'
 import Dot from '../public/dots.svg'
 import Send from '../public/send.svg'
-import Comment from '../public/coment.svg'
+import Comment from '../public/comment.svg'
 import Homes from '../public/home.svg'
 import Search from '../public/search.svg'
 import Add from '../public/add.svg'
 import Reel from '../public/reel.svg'
 import Profile from '../public/profile.svg'
 import Save from '../public/save.svg'
+import Link from 'next/link'
+import ReactPlayer from 'react-player'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -56,62 +58,78 @@ export default function Home() {
               <img className={Style.story_img} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0UG0VraXJOI61sEgnf09yH_uIUTr5lCCIINzMIBpbFaOHOWWnegZzeScEad5OkRv1h_M&usqp=CAU" alt="" />
               <p >thv</p>
             </div>
+            <div className={Style.story_section_img_name}>
+              <img className={Style.story_img} style={{ background: '#ffffff61', color: '#ffffffa3' }} src="https://lh3.googleusercontent.com/47bi6kNTTwsc21QgIW8YL92OVdjvl3CLyhLcfPTR9L290dLFRAgINDVe17LFKwc2RbOKUOA-D_9GMQ_v2MrM_EL-TFgo5_A9bqR0MuxwcfL9VQ=w960-rj-nu-e365" alt="" />
+              <p style={{ color: '#ffffffa3' }}>j.m</p>
+            </div>
+            <div className={Style.story_section_img_name}>
+              <img className={Style.story_img} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0UG0VraXJOI61sEgnf09yH_uIUTr5lCCIINzMIBpbFaOHOWWnegZzeScEad5OkRv1h_M&usqp=CAU" alt="" />
+              <p >thv</p>
+            </div>
           </div>
         </div>
-        <section>
-          <div className={Style.header}>
-            <div className={Style.left_nav}>
-              <img className={Style.left_nav_img} src='https://images.freeimages.com/images/large-previews/34e/williamstown-1057646.jpg' alt="" />
-              <h3>john_doe</h3>
+        <main className={Style.main}>
+          <section>
+            <div className={Style.header}>
+              <div className={Style.left_nav}>
+                <img className={Style.left_nav_img} src='https://images.freeimages.com/images/large-previews/34e/williamstown-1057646.jpg' alt="" />
+                <h3>John_doe</h3>
+              </div>
+              <Image src={Dot} className={Style.icon} />
             </div>
-            <Image src={Dot} className={Style.icon} />
-          </div>
-          <div className={Style.post}>
-            <img src='https://images.pexels.com/photos/382177/pexels-photo-382177.jpeg?cs=srgb&dl=pexels-jahoo-clouseau-382177.jpg&fm=jpg' alt="" />
-          </div>
-          <div className={Style.post_footer}>
-            <span className={Style.left_icon}>
-              <Image className={Style.icon} src={Heart} />
-              <Image className={Style.icon} src={Comment} />
-              <Image className={Style.icon} src={Send} />
-            </span>
-            <Image src={Save} className={Style.icon} />
-          </div>
-          <div className="liked_section">
-            {/* <Image className={Style.icon} src={Like} onClick={() => { }} /> */}
-            
-          </div>
-        </section>
-        <section>
-          <div className={Style.header}>
-            <div className={Style.left_nav}>
-              <img className={Style.left_nav_img} src="https://images.freeimages.com/images/large-previews/a6f/williamstown-1057657.jpg" alt="" />
-              <h3>unicorn</h3>
+            <div className={Style.post}>
+              {/* <video src='../public/social_media.mp4' />    */}
+              <video controls width='100%'>
+                <source src="../public/social_media.mp4" type="video/mp4" />
+              </video>
             </div>
-            <Image src={Dot} className={Style.icon} />
-          </div>
-          <div className={Style.post}>
-            <img   src="https://media.cntraveler.com/photos/5ea9df878abbf81d02aeae0b/1:1/w_4016,h_4016,c_limit/Kawachi-Fuji-Garden-wisteria-GettyImages-684691336.jpg" alt="" srcset="" />
-          </div>
-          <div className={Style.post_footer}>
-            <span className={Style.left_icon}>
-              <Image className={Style.icon} src={Heart} />
-              <Image className={Style.icon} src={Comment} />
-              <Image className={Style.icon} src={Send} />
-            </span>
-            <Image src={Save} className={Style.icon} />
-          </div>
-        </section>
+            <div className={Style.post_footer}>
+              <span className={Style.left_icon}>
+                <Image className={Style.icon} src={Heart} />
+                <Image className={Style.icon} src={Comment} />
+                <Image className={Style.icon} src={Send} />
+              </span>
+              <Image src={Save} className={Style.icon} />
+            </div>
+            <div className="liked_section">
+              {/* <Image className={Style.icon} src={Like} onClick={() => { }} /> */}
+            </div>
+          </section>
+          <section>
+            <div className={Style.header}>
+              <div className={Style.left_nav}>
+                <img className={Style.left_nav_img} src="https://images.freeimages.com/images/large-previews/a6f/williamstown-1057657.jpg" alt="" />
+                <h3>unicorn_girl</h3>
+              </div>
+              <Image src={Dot} className={Style.icon} />
+            </div>
+            <div className={Style.post}>
+              <img src="https://media.cntraveler.com/photos/5ea9df878abbf81d02aeae0b/1:1/w_4016,h_4016,c_limit/Kawachi-Fuji-Garden-wisteria-GettyImages-684691336.jpg" alt="" srcset="" />
+            </div>
+            <div className={Style.post_footer}>
+              <span className={Style.left_icon}>
+                <Image className={Style.icon} src={Heart} />
+                <Image className={Style.icon} src={Comment} />
+                <Image className={Style.icon} src={Send} />
+              </span>
+              <Image src={Save} className={Style.icon} />
+            </div>
+          </section>
+        </main>
         <div className={Style.footer}>
           <Image className={Style.icon} src={Homes} />
           <Image className={Style.icon} src={Search} />
           <Image className={Style.icon} src={Add} />
           <Image className={Style.icon} src={Reel} />
           <Image className={Style.icon} src={Profile} />
-
         </div>
-
       </div>
+      <div>
+        <Link href="https://github.com/vensi9/next-insta-clone" className={Style.github_btn}>
+          See on GitHub
+        </Link>
+      </div>
+
     </>
   )
 }

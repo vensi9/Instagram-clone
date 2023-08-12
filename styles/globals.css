@@ -1,13 +1,63 @@
+body {
+  min-height: 100vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(146deg, #ff00bc59,#b5b5b54a,#ff00ff66, transparent);
+  overflow: hidden;
+}
+
 body,
 p {
   margin: 0;
 }
-.Home_icon__iJDY0{
+
+.Home_icon__iJDY0 {
   cursor: pointer;
 }
-p{
+
+p {
   font-size: 14px;
 }
-h3{
+
+h3 {
   font-size: 16px;
+}
+/* styles/VideoPlayer.css */
+/* Hide the default progress bar */
+video::-webkit-media-controls-timeline {
+  display: none !important;
+}
+
+/* Hide the volume icon */
+video::-webkit-media-controls-volume-slider {
+  display: none !important;
+}
+/* styles/VideoPlayer.css */
+/* Hide sizing controls */
+video::-webkit-media-controls-resize-button {
+  display: none !important;
+}
+
+/* Hide the three dots menu */
+video::-webkit-media-controls-overflow-button {
+  display: none !important;
+}
+/* styles/VideoPlayer.css */
+/* Hide the play button */
+video::-webkit-media-controls-play-button {
+  display: none !important;
+}
+
+/* Hide the play button for Firefox */
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+#__next{
+
+  box-shadow: 0px 0px 22px #00000078;
+}
+::-webkit-scrollbar {
+  display: none;
 }
