@@ -29,27 +29,56 @@
 
 .navbar {
   background: #0c0c0c;
-  position: sticky;
-  top: 0;
+  position: fixed;
+  width: 440px;
   z-index: 100;
+}
+
+.story_section {
+  padding-top: 60px;
 }
 
 .story_img {
   border-radius: 50%;
-  /* width: 10%;
-  height: 12vh; */
   width: 75px;
-  height: 10vh;
+  height: 75px;
+  /* Adjust the height as needed */
   padding: 3px;
-  /* background: #0c0c0c; */
-  /* border: 4px solid;  */
   background: linear-gradient(45deg, red, #ff002d, #9d00ff);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out;
+}
 
-  gap: 1rem;
+.pulsate {
+  animation: pulsate 1.5s infinite;
+}
+
+@keyframes pulsate {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
 }
 
 .img1 {
   background: #ffffff61;
+}
+
+.story_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.active_story {
+  border-color: #ff002d;
 }
 
 .story_images {
@@ -59,7 +88,16 @@
   background: #0c0c0c;
   gap: 1rem;
   /* box-shadow: 1px 16px 19px -6px #161616; */
+  overflow: scroll;
+
 }
+
+/* Adjustments for the red heart color */
+.red_heart {
+  background-color: #ff002d;
+}
+
+/* Rest of your styles */
 
 .header {
   display: flex;
@@ -153,21 +191,58 @@
   transition: all 0.3s ease-in-out;
   font-family: Poppins;
 }
-.github_btn:hover{
-  transform:scale(1.1)
-}
-.main{
-  overflow: scroll;
-  width: auto;
-  height: 68vh;
+
+.github_btn:hover {
+  transform: scale(1.1)
 }
 
-@media screen and (min-width: 360px) {
-  .story_images {
-    /* overflow: scroll; */
+.content {
+  overflow: scroll;
+  width: auto;
+
+}
+
+.main {
+  /* overflow: scroll; */
+  height: 64vh !important;
+}
+
+@media screen and (min-width: 450px) and (max-width:1025px) {
+
+  .main {
+    height: 61vh !important;
+  }
+
+}
+
+@media screen and (max-width:1030px) {
+  .main {
+    height: 61vh !important;
+  }
+
+  .container {
+    height: 100vh !important;
   }
 }
+
+@media screen and (max-width: 450px) and (min-width:430px) {
+  .main {
+    height: 62vh;
+  }
+
+}
+
+@media screen and (max-width: 430px)and (min-width:320px) {
+  .main {
+    height: 63vh;
+  }
+
+}
+
 @media screen and (max-width: 360px) {
+  .main {
+    height: 60vh;
+  }
 
   /* .github_btn {
     position: relative;
@@ -180,7 +255,7 @@
   }
 
   .container {
-    height: auto;
+    height: 100vh;
     width: 360px;
   }
 
